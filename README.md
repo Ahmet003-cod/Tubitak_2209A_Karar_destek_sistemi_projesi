@@ -165,11 +165,27 @@ Kayıtlı modeller `models/` klasöründe hazır olarak bulunmaktadır. Yeniden 
 python train_models.py
 ```
 
-### 5. Karar Destek Arayüzünü Başlatın
+### 5. Karar Destek Arayüzünü Başlatın (Yerel)
 ```bash
 streamlit run app.py
 ```
 Komutu çalıştırdıktan sonra tarayıcınızda otomatik olarak `http://localhost:8501` adresi açılacaktır.
+
+---
+
+### 🐳 Docker ile Tek Komutta Çalıştırma (Alternatif)
+
+Projeyi hiçbir bağımlılık yüklemeden Docker konteyneri içinde çalıştırmak için:
+
+```bash
+docker compose up --build
+```
+Konteyner ayağa kalktıktan sonra tarayıcınızdan **`http://localhost:8050`** adresine gidebilirsiniz.
+
+Durdurmak için:
+```bash
+docker compose down
+```
 
 ---
 
@@ -196,7 +212,11 @@ Komutu çalıştırdıktan sonra tarayıcınızda otomatik olarak `http://localh
 ├── train_models.py                       # Veri ön işleme ve model eğitim boru hattı
 ├── run_detailed_analysis.py              # Detaylı XAI ve metrik analiz betiği
 ├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Ham veri seti
+├── Dockerfile                            # Konteyner yapılandırması
+├── docker-compose.yml                    # Konteyner orkestrasyonu (Port: 8050)
+├── .dockerignore                         # Docker filtreleme kuralları
 ├── requirements.txt                      # Gerekli Python kütüphaneleri
+├── LICENSE                               # MIT Lisans belgesi
 └── README.md                             # Proje tanıtım ve dokümantasyon belgesi
 ```
 

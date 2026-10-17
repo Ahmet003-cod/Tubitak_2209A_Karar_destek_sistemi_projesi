@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.git
+.gitignore
+.env
+.venv
+venv/
+*.docx
+*.pdf
+assets/
+pdf_text_dump.txt
+churn_customer_analysis.json
+detailed_analysis_results.json
