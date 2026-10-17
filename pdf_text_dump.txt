@@ -1,0 +1,683 @@
+=== PAGE 1 ===
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+TÜBİTAK 2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA 
+PROJELERİ DESTEKLEME PROGRAMI  
+ 
+Başvuru formunun Arial 9 yazı tipinde, her bir konu başlığı altında verilen açıklamalar göz önünde 
+bulundurularak hazırlanması ve ekler hariç toplam 20 sayfayı geçmemesi beklenir (Alt sınır 
+bulunmamaktadır). Değerlendirme araştırma önerisinin bilimsel niteliği, yöntemi, proje yönetimi ve yaygın 
+etkisi başlıkları üzerinden yapılacaktır.  
+ 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2025 Yılı  
+ 
+1. Dönem Başvurusu
+
+=== PAGE 2 ===
+2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 2 
+  
+ A. GENEL BİLGİLER  
+ 
+Başvuru Sahibinin Adı Soyadı:  Ahmet GÜN  
+Araştırma Önerisinin Başlığı: İşletmelerde Çoklu Yapay Zek â Modelleri yle Açıklanabilir Müşteri Kaybı 
+Tahminleme ve Ka rar Destek Prototipinin Oluşturulması  
+Danışmanın Adı Soyadı: Yeşim ÜLGEN SÖNMEZ  
+Araştırmanın Yürütüleceği Kurum/Kuruluş: Fırat Üniversitesi  
+ 
+ÖZET  
+ 
+     Araştırma önerisi özetinin (1) bilimsel nitelik; (2) yöntem; (3) proje yönetimi ve (4) yaygın etki hakkında bilgileri 
+kapsaması beklenir. Bu bölümün en son yazılması önerilir.   
+ 
+20.yüzyılın ikinci yarısından itibaren hızla büyüyen rekabet ortamı, kurumların müşterilerini elde tutma 
+stratejilerinde veri temelli çözümler geliştirmeye yöneltmiştir. Özellikle telekomünikasyon sektöründe müşteri 
+kaybı (churn) analizi, işletmelerin sürdürülebilirliği için stratejik bir unsur haline gelmiştir. Ancak, mevc ut yapay 
+zekâ tabanlı tahmin modelleri çoğu zaman yalnızca yüksek doğruluk oranlarına odaklanmakta, bu tahminlerin 
+neden ve nasıl oluştuğunu açıklamakta yetersi z kalmaktadır. Müşteri kaybı tahmini gibi kritik karar destek 
+sistemlerinde, makine öğrenmesi al goritmalarının "karanlık kutu" doğası kabul edilemez bir risk taşımaktadır. 
+Her bir tahmin i bir olasılık değerinden öte, XAI  (Açıklanabilir Yapay Zekâ) prensipleriyle yorumlanabilir bir 
+nedensellik zinciri olarak ele almalı; böylece karmaşık modelleri, kar ar mekanizmalarını şeffaflaştıran, güvenilir 
+ve denetlenebilir sistemler haline  getirmeliyiz . Bu vizyon doğrultusunda projemizin misyonu yalnızca modellerin 
+doğruluğunu artırmak değil, aynı zamanda tahminsel modellemede güven ve anlayışın özünü yeniden 
+tanımlamaktır.  
+ 
+Bu çalışmada, Kaggle Telco Customer Churn veri seti üzerinde hem Makine Öğrenmesi (ML) hem de Derin 
+Öğrenme (DL) tabanlı modeller kullanılacaktır. Bu sayede her modelin güçlü yönü devreye alınarak tahmin 
+performansı artırılacaktır. İlk aşamada  veri temizleme ve ön işleme işlemleri tamamlanacak, ardından Lojistik 
+Regresyon, Random Forest, KNN, SVM ve XGBoost modelleri eğitilecektir. Modellerin performansı yalnızca 
+doğruluk (Accuracy) üzerinden değil; aynı zamanda F1-Score, Precision (Kesinlik), Recall (Duyarlılık) ve  AUC 
+(Area Under Curve) gibi istatistiksel metriklerle de değerlendirilecektir. Bu kapsamlı değerlendirme, modellerin 
+sadece genel doğruluklarını değil, aynı zamanda dengesiz veri dağılımlarındaki tahmin güvenirliklerini de 
+ortaya koy acaktır. En yüksek genel başarıya sahip model seçilerek performansı derin öğrenme modeli ile 
+karşılaştırılacaktır.   
+Projede özgün olarak, modellerin sadece sonuçları değil, karar mekanizmaları da derinlemesine incelenecektir. 
+Bu amaçla, Açıklanabilir Yapay  Zekâ (XAI) alanında öne çıkan bir yöntem olan SHAP (SHapley Additive 
+exPlanations)  kullanılacaktır. SHAP, işbirlikçi oyun teorisine dayalı olarak her bir özelliğin modele katkısını adil 
+biçimde ölçer ve böylece “kara kutu” olarak adlandırılan yapay zekâ m odellerinin iç işleyişini görünür hale 
+getirir. “Kara kutu” kavramı, modelin yüksek doğrulukla sonuç üretmesine rağmen bu sonuçların nasıl elde 
+edildiğinin insan tarafından anlaşılamadığı durumu ifade eder. SHAP yöntemi sayesinde bu şeffaflık sorunu 
+ortada n kaldırılarak, müşteri kaybını en çok etkileyen faktörler açıkça görülebilecek ve modelin karar mantığı 
+insan gözüyle yorumlanabilir hale gelecektir.   
+Son aşamada, en başarılı ve açıklanabilir model Streamlit kütüphanesi kullanılarak etkileşimli bir prototipe 
+dönüştürülecektir. Bu sayede kullanıcılar, tahmin sonuçlarını görsel olarak inceleyebilecek, SHAP analizleriyle 
+her bir değişkenin etkisini interaktif biçimde gözlemleyebilecektir. Sonuç olarak, bu proje y alnızca yüksek 
+doğrulukta tahmin yapan bir model sunmayı değil, aynı zamanda kararların ardındaki mantığı da görünür 
+kılmayı hedeflemektedir. Böylece telekom müşteri kaybı tahmini alanında hem bilimsel hem de pratik düzeyde 
+açıklanabilir yapay zekâ temelli  yenilikçi bir çözüm  ortaya konacaktır.  
+Anahtar Kelimeler:  Derin Öğrenme, Kara Kutu, Makine Öğrenmesi,  SHAP , XAI  
+ 
+ 
+1. ARAŞTIRMA ÖNERİSİNİN BİLİMSEL NİTELİĞİ  
+ 
+ 1.1. Konunun Önemi ve Araştırma Önerisinin Bilimsel Niteliği  
+ 
+Araştırma önerisinde ele alınan konunun kapsamı, sınırları ve önemi ortaya konulur. Araştırma önerisi 
+kapsamında yapılacak çalışmalarla literatürdeki hangi eksikliğin nasıl giderileceği veya hangi soruna nasıl bir 
+çözüm getirileceği ilgili literatüre atıfl a açıklanarak araştırma önerisinin bilimsel niteliği ortaya konulur. Araştırma 
+sorusu ve varsa hipotez(ler)i tanımlanır.  
+=== PAGE 3 ===
+2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 3 
+  
+ Projenin konusu, 12. Kalkınma Planı ve 2030 Sanayi ve Teknoloji Stratejisi’nde yer alan kritik teknoloji alanları 
+ile öncelikli Ar -Ge ve yenilik konuları ile ilişkili ise, ilişkilendirilme sebebi ve ilgili alana sağlayacağı yararlar 
+açıklanmalıdır.  
+Konunun Kapsamı ve Önemi : Bu araştırma, kapsam olarak işletmelerin sürdürülebilir büyümesi için kritik öneme sahip 
+olan müşteri kaybı (customer churn) sorununa proaktif bir yaklaşımla çözüm üretmeyi hedeflemektedir. Artan rekabet 
+koşulları, işletmelerin yalnızca yeni müşteri kazanımına değil, mevcut müşterileri elde tutmaya da stratejik önem 
+vermesini zorunlu kılmıştır. Özellikle telekom ünikasyon gibi rekabetin yoğun yaşandığı sektörlerde, yeni bir müşteri 
+kazanma maliyetinin mevcut bir müşteriyi el de tutma maliyetinden  daha fazla olduğu yapıla n çalışmalarda 
+vurgulanmıştır [1 ]. Dolayısıyla müşteri kaybının erken tespiti ve önlenmesi, işle tmelerin finansal sürdürülebilirliği ka dar, 
+marka itibarı ve müşteri sada katini koruma açısından da proaktif bir strateji k gereklilik haline gelmiştir [2 ]. Bu projenin 
+temel amacı, telekomünikasyon sektöründeki müşterilerin davranışsal ve demografik özelli klerini kullanarak, şirketten 
+ayrılıp ayrılmayacaklarını tahmin edebilen ve bu tahminlerin nedenlerini açıklayabilen modeller geliştirmektir. Böylece 
+yalnızca “kim gidecek” sorusuna değil, aynı zamanda “neden gidecek” sorusuna da yanıt aranacaktır. Çünkü b ir işletme 
+için bir müşterinin neden ayrıldığı bilgisi, gelecekte benzer müşteri kayıplarını önlemenin anahtarıdır.  
+Literatürdeki  Eksiklik ve Bilimsel Nitelik  (Özgün Değer):  Son yıllarda Makine Öğrenmesi (ML) ve Derin Öğrenme 
+(DL) yöntemleri müşteri kaybı tahmininde yaygın olarak kullanılmaktadır. Ancak literatürdeki çalışmaların büyük 
+çoğunluğu yalnızca modelin doğruluk oranına (accuracy) odaklanmakta dır [2, 3, 4]  ancak; karar süreçlerinin 
+açıklanabilirliğini ihmal etmektedir . Oysa işletme yöneticileri içi n yüksek doğruluk oranına sahip ama karar mantığı 
+anlaşılmayan bir modelin değeri sınırlıdır. Çünkü bu tür “kara kutu” (black box) modeller, tahmin sonuçlarının 
+nedenlerini açıklamadığı için stratejik kararların  alınmasını zorlaştırmaktadır [3 , 4]. Bu amaç la, Açıklanabilir Yapay Zekâ 
+(XAI) alanındaki en gelişmiş tekniklerden biri olan SHAP (S Hapley Additive exPlanations) [4 ] yöntemi kullanılacaktır. 
+İşbirlikçi oyun teorisine dayanan SHAP, her bir özelliğin modelin tahminine olan katkısını adil bir şekilde ö lçerek “kara 
+kutu”yu anlaşılır hale getirir [ 5]. Bu proje, yalnızca klasik makine öğrenmesi modellerini değil, aynı zamanda *derin 
+öğrenme (Deep Learning)* mimarilerini de kapsayarak literatürdeki açıklanabilirlik tartışmalarını ileri bir düzeye taşımayı 
+hedeflemektedir. Özellikle Çok Katmanlı Algılayıcı (MLP) modelinin SHAP  [6, 7, 8] yöntemiyle analiz edilmesi, genellikle 
+kara kutu olarak görülen derin öğrenme modellerinin nasıl karar verdiğini aydınlatacaktır. Böylece, hem klasik ML hem 
+de DL modelleri SHAP aracılığıyla karşılaştırılarak hangi yaklaşımın “daha iyi açıklanabilir” ve “ daha eyleme geçirilebilir” 
+çıktılar sunduğu bilimsel olarak ortaya konacaktır [ 9]. Bu yönüyle proje, yalnızca tahmin gücü yüksek bir model 
+geliştirmeyi değil, aynı zamanda yöneticilerin güvenle kullanabileceği, açıklanabilir ve proaktif bir karar destek si stemi 
+tasarlamayı amaçlamaktadır.  
+ 
+Prototipleme ve Kullanılacak Teknoloji:  Analizlerin sonunda, geliştirilen model sonuçları interaktif bir web prototipi 
+aracılığıyla sunulacaktır. Bu prototip, kullanıcıların bir müşterinin ayrılma olasılığını ve bu kararın arkasındaki nedenleri  
+(örneğin yüksek fatura, kısa abonelik süresi gibi) görsel olarak inceleyebileceği şekilde tasarlanacaktır. Prototip 
+geliştirmede Streamlit Kütüphanesi  kullanılacaktır. Streamlit, veri bilimi çıktılarının (grafikler, tablolar, SHAP görselleri) 
+web arayüzünde kolayca sunulmasına imkân tanıyan, modern ve dina mik bir framework’tür. Geleneksel masaüstü 
+araçlarından Tkinter’a kıyasla çok daha hızlı prototipleme olanağı sağlar; ayrıca web tabanlı olması sayesinde çok 
+kullanıcı tarafından aynı anda erişilebilir bir karar destek aracı sunar. Bu yönüyle Streamlit, he m akademik hem de 
+endüstriyel uygulamalarda etkileşimli açıklanabilirlik sunmak için en uygun platformdur.  
+ 
+Bu çalışmanın Bilimsel ve Stratejik Katkı:  Bu proje, klasik doğruluk odaklı modelleme anlayışını aşarak açıklanabilir 
+yapay zekâ yaklaşımıyla “neden -sonuç ilişkilerini” ön plana çıkaracaktır. Böylece yalnızca teknik olarak güçlü değil, aynı 
+zamanda karar vericiler için güvenilir, proaktif ve eyleme geçirilebilir sonuçlar üreten bir yapay zekâ sistemi 
+oluşturulacaktır. Türkiye’nin 12. Kalkınma Pl anı ve 2030 Sanayi ve Teknoloji Stratejisi’nde vurgulanan “Yapay Zekâ”, 
+“Büyük Veri” ve “Dijital Dönüşüm” öncelikli alanlarıyla doğrudan uyumlu olan bu proje, ulusal dijital dönüşüm hedeflerine 
+katkı sağlayacaktır. Ayrıca, müşteri kaybının ekonomik ve stra tejik önemini merkeze alarak, işletmelerin rekabet gücünü 
+artıracak veriye dayalı bir karar destek sistemi sunacaktır.  
+ 
+ 
+1.2. Amaç ve Hedefler  
+    
+Araştırma önerisinin amacı ve hedefleri açık, ölçülebilir, gerçekçi ve ulaşılabilir nitelikte olacak şekilde yazılır.  
+ 
+Bu araştırmanın temel amacı, Kaggle platformunda yer alan Telco Customer Churn veri setini kullanarak müşteri 
+kaybını tahmin edebilen bir yapay zekâ modeli geliştirmektir. Bu doğrultuda, veri seti üzerinde makine öğrenmesi ve 
+derin öğrenme modell eri eğitilecek; elde edilen sonuçlar SHAP ( SHapley Additive exPlanations) K ütüphanesi 
+kullanılarak açıklanabilir hâle getirilecektir. Böylece, yöneticilerin bir müşterinin neden kaybedileceğini daha iyi 
+anlamaları ve bu nedenlere yönelik önleyici stratejil er geliştirebilmeleri hedeflenmektedir . 
+Araştırmanın spesifik amaç ve hedefleri şu şekilde belirlenmiştir:  
+Amaç 1:  Telekomünikasyon sektöründe müşteri kaybını (churn) önceden tahmin edebilen yapay zekâ tabanlı bir model 
+=== PAGE 4 ===
+2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 4 
+  
+ geliştirmek.  
+● Hedef 1:  Kaggle platformundan alınan Telco Customer veri setini analiz ederek, makine öğrenmesi                           
+yöntemleriyle (Lojistik Regresyon, Random Forest, KNN, SVM, XGBoost) müşteri kaybı tahmin modelleri 
+oluşturmak ve   performanslarını karşılaştırmak.  
+Amaç 2:  Müşteri kaybı tahmininde derin öğrenme yöntemlerinin etkinliğini incelemek.  
+● Hedef 2:  Makine öğrenmesi sonuçlarından elde edilen en başarılı modeli temel alarak bir derin öğrenme (DL) 
+modeli kurmak ve performans metrikleri (accuracy, precision, recall, F1 -score) açısından karşılaştırmalı analiz 
+yapmak.  
+Amaç 3: Modelin karar süreçlerinin açıklanabilirliğini artırmak.  
+● Hedef 3:  Makine öğrenmesi ve derin öğrenme modellerine SHAP (SHapley Additive exPlanations) analizi 
+uygulayarak, modelin hangi değiş kenler aracılığıyla müşteri kaybı tahmininde bulunduğunu açıklamak ve karar 
+şeffaflığını sağlamak.  
+Amaç 4:  Kullanıcı dostu bir arayüz aracılığıyla modelin uygulanabilirliğini göstermek.  
+● Hedef 4 : En yüksek doğruluk oranına sahip modeli kullanarak bir Streamlit tabanlı prototip uygulama 
+geliştirmek, kullanıcıların müşteri verilerini girerek anında tahmin sonucu alabilecekleri bir sistem ortaya 
+koymak.  
+Amaç 5:  Proje çıktılarının sektörel faydasını ortaya koymak.  
+● Hedef 5:  Elde edilen bulgular ışığında, telekomünikasyon firmalarının müşteri kaybını önleme stratejilerine 
+yapay zekâ destekli bir çözüm önerisi sunmak ve müşteri sadakatini artırmaya yönelik veri temelli 
+yaklaşımlar  geliştirmek.  
+Amaç 6:  Literatürdeki kara kutu problemine açıklık getirmek.  
+● Hedef 6:  “Kara Kutu” problemini ( makinenin verdiği sonuçların arkasındaki nedenin bilinmemesi ) XAI tekniği 
+olan SHAP ile açıklamak ve Streamlit Kütüphanesi ile kullanıcılara müşteri kaybı nedenlerini görselleştirerek 
+sunmak.  
+ 
+ 
+2. YÖNTEM  
+ 
+Araştırmada uygulanacak yöntem ve araştırma tekniklerinin, amaç ve hedeflere ulaşmaya ne düzeyde elverişli 
+olduğu ilgili literatüre atıf yapılarak ortaya konulur.  
+ 
+Yöntem bölümünün; araştırma tasarımı, bağımlı ve bağımsız değişkenler, istatistiksel yöntem ler vb. unsurları 
+içermesi gerekir. Araştırma önerisinde herhangi bir ön çalışma veya fizibilite yapıldıysa bunların sunulması 
+beklenir. Araştırma önerisinde sunulan yöntemlerin çalışma takvimi ile ilişkilendirilmesi gerekir.  
+1. Kütüphanelerin Yüklenmesi v e Ortam Hazırlığı: Projenin ilk aşamasında Python tabanlı veri bilimi ve yapay zekâ 
+kütüph aneleri kurulmuştur. Kullanılacak başlıca kütüphaneler şunlardır  [10, 11, 12]: 
+● Pandas ve NumPy : Veri işleme ve istatistiksel analiz için,  
+● Matplotlib ve Seaborn: Görselleştirme için,  
+● Scikit -learn (sklearn): Makine öğrenmesi modellerinin uygulanması için,  
+● TensorFlow / Keras: Derin öğrenme modeli (MLP) kurulumu için  [6], 
+● SHAP: Açıklanabilir yapay zekâ analizleri için  [13], 
+● Streamlit: Sonuçların etkileşimli bir web arayüzünde görselleştirilmesi için kullanılmıştır.   
+2. Veri Setinin Temini ve İncelenmesi: Çalışmada kullanılan veri seti, “Kaggle Telco Customer Churn”  veri setidir. Veri 
+seti, bir telekomünikasyon firmasına ait müşteri bilgilerini (abonelik süresi, ödeme  tipi, internet hizmeti, toplam fatura 
+tutarı vb.) içermektedir.  Bu veri seti, müşteri kaybı tahmin çalışmalarında yaygın olarak kullanılan güvenilir bir kaynaktır.  
+3. Veri Ön İşleme ve Analiz: Bu aşamada proje kapsamında Telco Customer Churn veri seti kullanılmıştır. Veri seti, bir 
+=== PAGE 5 ===
+2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 5 
+  
+ telekomünikasyon şirketinin müşterilerine ait bilgilerden oluşmakta olup 7.043 satır ve 21 sütun içermektedir  [1]. Her 
+satır bir müşteriyi temsil ederken sütunlar; ci nsiyet, yaş, sözleşme türü, hizmet kullanımı, ödeme yöntemi, aylık ücret ve 
+müşteri kaybı (Churn) gibi değişkenleri içermektedir.  Veri ön işleme sürecinde eksik veriler tespit edilerek uygun biçimde 
+doldurulmuş, kategorik değişkenler sayısal değerlere dönü ştürülmüştür. Ardından veri setinin dağılımı, korelasyonları ve 
+önemli özellikleri EDA (Keşifsel Veri Analizi) [2] yöntemleriyle incelenmiştir. Görselleştirmeler aracılığıyla müşteri 
+kaybını etkileyen temel faktörler belirlenmiş ve analiz sonuçları grafikl erle desteklenmiştir.  
+4. Makine Öğrenmesi Modellerinin Eğitimi ve Karşılaştırılması:  Veri seti eğitim (%80) ve test (%20) olarak ikiye 
+ayrılacaktır. Ardından, beş farklı klasik makine öğrenmesi modeli uygulanacak:  
+● Lojistik Regresyon (Logistic Regression)  
+Lojistik regresyon, sınıflandırma problemlerinde yaygın olarak kullanılan istatistiksel bir yöntemdir. Model, bir müşterinin 
+“churn” (ayrılma) olasılığını tahmin ederken veriler arasındaki doğrusal ilişkiyi inceler. Çıktı 0 ile 1 arasında bir olasılı k 
+değe ri olarak hesaplanır. Bu yöntem, özellikle yorumlanabilirliği yüksek olması nedeniyle müşteri kaybı gibi iki sınıflı 
+(Yes/No) problemlerde sıkça tercih edilir . 
+● K-En Yakın Komşu (K -Nearest Neighbors, KNN)  
+KNN algoritması, bir örneğin sınıfını belirlemek içi n en yakın komşularına (benzer verilere) bakar. Yani yeni bir 
+müşterinin churn olup olmayacağı, geçmişteki benzer müşterilerin durumlarına göre tahmin edilir. Model, mesafe 
+ölçümleri (örneğin Öklid uzaklığı) ile çalışır ve veri yapısı karmaşık olsa bile ko lay uygulanabilir bir yöntemdir.  
+● Destek Vektör Makineleri (Support Vector Machines, SVM)  
+SVM, veriyi iki sınıfa ayıran en uygun sınırı (hiperdüzlemi) bulmayı amaçlar. Model, özellikle verilerin doğrusal olarak 
+ayrılmadığı durumlarda güçlü performans gösterir. Telco veri setinde SVM, müşteri kaybını etkileyen faktörler 
+arasındaki karmaşık ilişkileri öğrenerek yüksek doğruluk oranı elde edebilir.  
+● Random Forest (Rastgele Orman)  
+Random Forest, birden fazla karar ağacından oluşan topluluk (ensemble) öğrenm e yöntemidir. Her ağaç verinin 
+rastgele bir alt kümesiyle eğitilir ve sonuçta tüm ağaçların oylamasıyla nihai karar verilir. Bu yöntem, gürültülü verilerde 
+dahi dengeli tahminler üreterek aşırı öğrenme (overfitting) riskini azaltır. Müşteri kaybı tahminind e, birçok değişkeni aynı 
+anda değerlendirerek sağlam sonuçlar üretir.  
+● XGBoost (Extreme Gradient Boosting)  
+XGBoost, gradyan artırmalı karar ağaçları temelli güçlü bir topluluk öğrenme algoritmasıdır. Her yeni ağaç, önceki 
+ağaçların yaptığı hataları azaltaca k şekilde eğitilir. Bu yaklaşım, hem hız hem de doğruluk açısından diğer birçok klasik 
+yöntemi geride bırakır. Büyük veri setlerinde yüksek performans göstermesi nedeniyle churn tahmininde oldukça 
+etkilidir.  Modeller, doğruluk (Accuracy), F1 -Score ve AUC m etrikleriyle değerlendirelecek; en yüksek performansı 
+gösteren model “Klasik Şampiyon” olarak belirlenecektir.  
+5. Derin Öğrenme Modelinin Kurulması (MLP):  Bu aşamada müşteri kaybını tahmin etmek için derin öğrenme tabanlı 
+Çok Katmanlı Algılayıcı (Multilayer  Perceptron - MLP) modeli oluşturulmuştur. Derin öğrenme, insan beynindeki sinir 
+ağlarından esinlenen bir yöntem olup verideki karmaşık ve doğrusal olmayan ilişkileri öğrenme yeteneğine sahiptir. MLP 
+mimarisi; giriş, gizli ve çıkış katmanlarından oluşur. G iriş katmanı verileri alırken, gizli katmanlar bu bilgileri işleyerek 
+anlamlı örüntüler çıkarır ve çıkış katmanı müşterinin hizmeti bırakıp bırakmayacağını tahmin eder.  Modelin katman 
+sayısı, nöron sayısı, öğrenme oranı ve aktivasyon fonksiyonları optimize  edilerek en yüksek doğruluk elde edilmiştir. 
+Ayrıca eğitim sürecinde Adam optimizasyon algoritması ve ReLU aktivasyon fonksiyonu kullanılarak modelin öğrenme 
+kapasitesi artırılmıştır. Bu sayede MLP modeli, klasik makine öğrenmesi yöntemlerine kıyasla daha  yüksek doğruluk ve 
+genelleme başarısı göstermiştir.  
+6. SHAP ile Açıklanabilirlik Analizi:  Bu aşamada hem klasik makine öğrenmesi modelleri hem de derin öğrenme 
+(MLP) modeli üzerinde SHAP (SHapley Additive Explanations) yöntemi uygulanmıştır. SHAP, her bir değişkenin 
+(özelliğin) modelin tahminine ne ölçüde katkı sağladığını sayısal olarak açıklayan modern bir model açıklanabilirlik 
+tekniğidir. Oyun teorisine dayanan bu yöntem, her özelliğe bir “katkı değeri” atayarak modelin karar sürecini şeffaf hale 
+getiri r.Bu sayede, modelin müşteri kaybı tahminlerinde hangi faktörlerin en etkili olduğu açıkça görülmüştür. Ayrıca, 
+SHAP analizi ile “kara kutu” olarak görülen yapay zekâ modellerinin iç mantığı anlaşılır hale getirilmiş, yöneticilerin 
+model kararlarını proakt if, güvenilir ve açıklanabilir biçimde yorumlaması sağlanmıştır.     
+ 
+ 
+=== PAGE 6 ===
+2209 -A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEKLEME PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 6 
+  
+ 
+Şekil 1’de bu çalışmaya ait görsel sunulmuştur;  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Şekil 1. Önerilen Çalışmanın Çalışma Prensibi  
+7. Streamlit ile Karar Destek Prototipinin Geliştirilmesi:  Projenin son aşamasında, en yüksek doğruluk oranına 
+sahip model kullanılarak Streamlit tabanlı etkileşimli bir karar destek prototipi geliştirilmiştir. Streamlit, Python tabanlı , 
+makine öğrenmesi modellerinin gerçek zamanlı ve kullanıcı dostu arayüzlerle sunulmasını sa ğlayan bir web uygulama 
+framework’üdür.  Geliştirilen bu arayüz sayesinde kullanıcılar (örneğin işletme yöneticileri), sisteme müşteri verilerini 
+girerek anlık tahmin sonuçlarını görebilmekte ve SHAP analizi üzerinden her bir özelliğin model kararına etkisi ni görsel 
+olarak inceleyebilmektedir.  Bu yapı sayesinde proje yalnızca bir yapay zekâ modeli olmaktan çıkmış; uygulanabilir, 
+açıklanabilir ve karar destek süreçlerine entegre edilebilen bir iş zekâsı aracına dönüşmüştür. Böylece yöneticiler, 
+müşteri kaybı r isklerini öngörüp veriye dayalı stratejik kararlar alabilmektedir.  Şekil 2’de temsili bir SHAP yöntemiyle 
+oluşturulan müşteri kaybı  risk analizi sunulmuştur.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Şekil 2.   SHAP (Shapley Additive Explanations) yöntemiyle oluşturulan müşteri kaybı  risk analizi.  
+
+=== PAGE 7 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 7 
+  
+ 3.  PROJE YÖNETİMİ  
+ 
+3.1 Çalışma Takvimi  
+ 
+Araştırmada yer alacak başlıca faaliyetler, her bir faaliyetin hangi sürede gerçekleştirileceği, başarı ölçütü ve 
+araştırmanın başarısına katkısı “Çalışma Takvimi” doldurularak sunulur.  
+ 
+ÇALIŞMA TAKVİMİ (*)  
+         
+Tarih Aralığı  
+ Faaliyetler**  Kim(ler) Tarafından 
+Gerçekleştirileceği   Başarı Ölçütü ve 
+Araştırmanın 
+Başarısına 
+Katkısı***  
+01/04/2026 – 
+30/04/2026  Kütüphanelerin Yüklenmesi 
+ve Ortam Hazırlığı  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %5 
+01/05/2026 – 
+31/05/2026  Veri Setinin Temini ve 
+İncelenmesi  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %10 
+01/06/2026 – 
+31/07/2026  Veri Ön İşleme ve Analiz  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %15 
+01/08/2026 – 
+30/09/2026  Makine Öğrenmesi 
+Modellerinin Eğitimi ve 
+Karşılaştırılması  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %15 
+01/10/2026 – 
+30/11/2026  Derin Öğrenme Modelinin 
+Kurulması  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %15 
+01/12/2026 – 
+31/01/2027  SHAP ile Açıklanabilirlik 
+Analizi  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %20 
+01/02/2027 – 
+31/03/2027  Streamlit ile Karar Destek 
+Prototipinin Geliştirilmesi  2.Sınıf Öğrencileri  
+Ahmet GÜN  - Yusuf ALATAŞ -
+Gülsüm ÇELİK  - Sefa ŞAHİN  %20 
+ 
+(*) Çizelgedeki satırlar ve sütunlar gerektiği kadar genişletilebilir ve çoğaltılabilir.  
+(**) Literatür taraması, sonuç raporu hazırlama aşamaları, araştırma sonuçlarının paylaşımı,  ve malzeme alımı ayrı 
+birer iş adımı olarak gösterilmemelidir.  
+(***) Başarı ölçütü, ölçülebilir ve izlenebilir nitelikte olaca k şekilde nicel veya nitel ölçütlerle (ifade, sayı, yüzde, vb.) 
+belirtilir. Bu sütundaki değerlerin toplamı 100 olmalıdır.  
+ 
+ 
+=== PAGE 8 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 8 
+  
+ 3.2 Risk Yönetimi  
+   Araştırmanın başarısını olumsuz yönde etkileyebilecek riskler ve bu risklerle karşılaşıldığında araştırmanın 
+başarıyla yürütülmesini sağlamak için alınacak tedbirler (B Planı) aşağıdaki Risk Yönetimi Tablosu’nda ifade 
+edilir. B Plan(lar)ının uygulanması  araştırmanın temel hedeflerinden sapmaya yol açmamalıdır. B 
+Plan(lar)ına geçilmesi durumunda yöntem değişikliğine gidiliyor ise bu durum detaylandırılmalıdır.  
+ 
+                                                       RİSK YÖNETİMİ TABLOSU*  
+En Önemli Riskler  Alınacak Tedbirler (B Planı)  
+1-Veri Setindeki riskler  Bu çalışmada veri kaynağı olarak Kaggle açık kaynak 
+platformunda yer alan “Telco Customer Churn” veri seti 
+kullanılacaktır. Veri seti; müşterilerin demografik 
+bilgilerini, hizmet kullanım detaylarını, sözleşme türlerini 
+ve abonelik sürelerini içermektedir. Çalışmanın temel 
+amacı müşterilerin hizmeti terk etme durumlarının 
+(churn) tahmin edilmesidir.  Veri setinde eksik veri veya 
+dengesiz sınıf dağılımı bulunması durumunda; SMOTE 
+(Synthetic Minority Oversampling Te chnique) gibi 
+yöntemler kullanılarak sentetik örnekler üretilecek ve veri 
+seti dengelenecektir. Böylece modelin öğrenme 
+performansının artırılması ve azınlık sınıfının temsil 
+gücünün yükseltilmesi hedeflenmektedir.  Veri seti 
+üzerinde gerekli ön işleme adıml arı (eksik veri kontrolü, 
+veri tipi dönüşümleri, kategorik veri kodlaması, 
+normalizasyon ve ölçekleme işlemleri) uygulanarak 
+model eğitimine hazır hale getirilecektir.  
+2-Veri Ön İşleme  Veri setinde yer alan kategorik ifadeler, makine 
+öğrenmesi modeli açıs ından doğrudan kullanılmaya 
+uygun değildir. Bu nedenle, cinsiyet, medeni durum, 
+internet hizmet türü ve hedef değişken gibi kategorik 
+nitelikteki alanlar ikili  (0–1) kodlama veya One -Hot 
+Encoding yöntemiyle sayısallaştırılacaktır.  Bunun 
+yanında, bazı sütunl ardaki değerler sayısal olup farklı 
+ölçek aralıklarında (örneğin aylık ücret, toplam ücret, 
+hizmet süresi gibi) bulunurken diğer sütunlar 0 ve 1 
+şeklindedir. Modelin bu farklı büyüklükteki değerleri 
+doğru yorumlayabilmesi için tüm sayısal değişkenler 0 –1 
+aralığına ölçeklenecektir (Min -Max Normalizasyonu ).Bu 
+işlemler sayesinde verilerin tutarlı hale getirilmesi, 
+modelin öğrenme kabiliyetinin artırılması ve daha sağlıklı 
+tahminler yapılması hedeflenmektedir.  
+3- Öznitelik Çıkarma  Veri setinde model performan sını olumsuz 
+etkileyebilecek veya bilgi değeri düşük olan değişkenler 
+bulunabilir. Bu nedenle ilk aşamada özellik seçimi 
+(feature selection) işlemi gerçekleştirilecektir. Bu 
+kapsamda, değişkenler arasındaki ilişkileri belirlemek 
+amacıyla korelasyon analizi , istatistiksel bağımlılık 
+testleri ve model tabanlı önem li (feature importance)  
+yöntemler  kullanılacaktır. Model performansına katkısı 
+düşük olan veya negatif etki oluşturan öznitelikler tespit 
+edilerek veri setinden çıkarılacaktır. Böylece, modelin 
+gereksiz bilgilere odaklanmasının önüne geçilecek, 
+eğitim süresi kısaltılacak ve genel tahmin performansı 
+artırılacaktır.  Bu yaklaşım sayesinde daha yalın, optimize 
+edilmiş ve yüksek doğruluk sağlayan bir makine 
+öğrenmesi modeli elde edilmesi hedeflenmektedir.  
+=== PAGE 9 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 9 
+  
+ 4- Derin Öğrenme   Bu veri seti üzerinde derin öğrenme modeli eğitilirken 
+overfitting (aşırı öğrenme) veya underfitting (yetersiz 
+öğrenme) riskleri ortaya çıkabilir. Bu risklerin önüne 
+geçebilmek için model hiperparametreleri sistematik 
+şekilde optimize edilecektir.  Bu kapsamda; epoch sayısı, 
+öğrenme oranı (learning rate), aktivasyon fonksiyonları 
+(activation functions), katman ve nöron sayısı (network 
+architecture) gibi kritik parametreler ayarlanacaktır. 
+Ayrıca erken durdurma (early stopping), dropout, L 2 
+regularizasyonu gibi yöntemler kullanılarak modelin 
+genelleme kabiliyeti artırılacaktır.  Bu optimizasyon süreci 
+sayesinde modelin eğitim ve test performansı dengeli 
+hale getirilecek, veri setine aşırı uyum sağlaması veya 
+yetersiz öğrenme göstermesi engell enecek ve daha 
+kararlı, güvenilir bir tahmin yapısı oluşturulacaktır.  
+5- XAI Sorunları  Bu projede, makine öğrenmesi ve derin öğrenme 
+modellerinin karar süreçlerini açıklamak amacıyla 
+açıklanabilir yapay zeka (Explainable AI – XAI) teknikleri 
+kullanılacaktır. Modelin hangi değişkenlere dayanarak 
+karar verdiğini analiz edebilmek için SHAP (SHa pley 
+Additive exPlanations) yöntemi uygulanacaktır. SHAP, 
+her bir özelliğin modele yaptığı katkıyı hesaplayarak 
+karmaşık algoritmaların karar mantığını görünür hale 
+getirmektedir.  Ancak, bazı gelişmiş makine öğrenmesi ve 
+derin öğrenme modellerinde XAI tekni kleri tam açıklama 
+sağlayamayabilir ve modelin tüm karar yapısını 
+anlamada sınırlı kalabilir. Bu nedenle, gerektiği 
+durumlarda yapay zekâ  ve veri bilimi uzmanlarından 
+profesyonel destek alınarak modelin açıklanabilirliği ve 
+doğrulama süreci güçlendirilecektir. Böylece proje 
+çıktılarının güvenilirliği  artırılacak ve olası “karar 
+şeffaflığı” sorunlarının önüne geçilecektir.  
+ 
+6- Önerilen hibrit modelin geliştirilmesi  Bu projede, makine öğrenmesi ve derin öğrenme 
+modelleri SHAP tabanlı açıklana bilir yapay zeka 
+yaklaşımı ile entegre edilerek bir kullanıcı arayüzüne 
+taşınacaktır. Ancak, bu iki bileşenin birlikte çalışması 
+sırasında model uyumsuzluğu, tutarsız yorum üretimi 
+veya yanlış tahminler ortaya çıkma riski bulunmaktadır.   
+Bu riskin yönetilebi lmesi için modelin farklı senaryolarda 
+test edilmesi, performans ölçütlerinin titizlikle izlenmesi 
+ve SHAP açıklamalarının doğruluğunun uzman 
+değerlendirmeleriyle teyit edilmesi sağlanacaktır. Gerekli 
+görülen durumlarda yapay zeka uzmanları ve veri bilimi 
+profesyonellerinden destek alınarak model mimarisi 
+optimize edilecek, açıklama mekanizmaları iyileştirilecek 
+ve sistemin kullanıcıya sunulmadan önce en güvenilir 
+hâle getirilmesi sağlanacaktır.  Bu sayede model –XAI–
+arayüz entegrasyonunda oluşabilecek uyumsuz luklar 
+giderilecek, kullanıcıya hatalı bilgi sunma riski en aza 
+indirilecek ve sistem yüksek doğruluk, güvenilirlik ve 
+tutarlılık ilkeleri doğrultusunda yapılandırılacaktır . 
+7- Kurulum ve uygulama  Bu projede, makine öğrenmesi ve derin öğrenme 
+modelleri S HAP tabanlı açıklanabilir yapay zek â 
+yaklaşımı ile entegre edilerek bir kullanıcı arayüzüne 
+taşınacaktır. Ancak, bu iki bileşenin birlikte çalışması 
+sırasında model uyumsuzluğu, tutarsız yorum üretimi 
+veya yanlış tahminler ortaya çıkma riski bulunmaktadır.  
+Bu riskin yönetilebilmesi için modelin farklı senaryolarda 
+test edilmesi, performans ölçütlerinin titizlikle izlenmesi 
+ve SHAP açıklamalarının doğruluğunun uzman 
+değerlendirmeleriyle teyit edilmesi sağlanacaktır. Gerekli 
+=== PAGE 10 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 10 
+  
+ görülen durumlarda yapay zek â uzman ları ve veri bilimi 
+profesyonellerinden destek alınarak model mimarisi 
+optimize edilecek, açıklama mekanizmaları iyileştirilecek 
+ve sistemin kullanıcıya sunulmadan önce en güvenilir 
+hâle getirilmesi sağlanacaktır.  Bu sayede model –XAI–
+arayüz entegrasyonunda oluşabilecek uyumsuzluklar 
+giderilecek, kullanıcıya hatalı bilgi sunma riski en aza 
+indirilecek ve sistem yüksek doğruluk, güvenilirlik ve 
+tutarlılık ilkeleri doğrultusunda yapılandırılacaktır.  
+ 8- Yazılım testleri  Proje sonunda geliştirilecek Streamlit t abanlı web 
+arayüzü, model çıktılarının kullanıcı tarafından kolay ve 
+anlaşılır biçimde görüntülenmesini sağlayacaktır. Ancak 
+prototip aşamasında arayüzün tam verimli çalışmaması, 
+performans hataları vermesi veya kullanıcıya yanlış 
+yönlendirme yapması gibi riskler bulunmaktadır . Ayrıca 
+kullanıcı deneyiminin  beklentileri karşılamama ihtimali 
+mevcuttur.  Bu riskleri azaltmak amacıyla arayüz 
+kapsamlı şekilde test edilecek, kullanıcı geri bildirimleri 
+toplanacak ve gerekli durumlarda tasarım ve algoritmalar 
+yeniden optimize edilecektir. Gerek duyulduğunda 
+yazılım geliştirme ve kullanıcı deneyimi alanlarında 
+profesyonel destek alınarak sistem iyileştirilecektir.  Bu 
+sayede, proje sonunda hatasız, kullanıcı dostu, güvenilir 
+ve amacına uygun çalışan bir prototip su nulması 
+hedeflenmektedir.  
+   (*) Tablodaki satırlar gerektiği kadar genişletilebilir ve çoğaltılabilir.  
+ 
+3.3.Araştırma Olanakları  
+Bu bölümde projenin yürütüleceği kurum ve kuruluşlarda  var olan ve projede kullanılacak olan altyapı/ekipman 
+(laboratuvar, araç, makine -teçhizat, vb.)  olanakları belirtilir.  
+ 
+ARAŞTIRMA OLANAKLARI TABLOSU (*) 
+ 
+Kuruluşta Bulunan Altyapı/Ekipman Türü, Modeli  
+(Laboratuvar, Araç, Makine -Teçhizat, vb.)  Projede Kullanım Amacı  
+Bilgisayar Laboratuvarı  Veri ön işleme adımlarının gerçekleştirilme si, 
+Hibrit ( Makine öğrenmesi, Derin Öğrenme ve  
+Shap birleşimi) modellerinin geliştirilmesi.  
+Yazılım Lisansları  Python 3.12,  XAI (SHAP), Google Colab GPU, 
+Cursor, Gemini vb.  
+ (*) Tablodaki satırlar gerektiği kadar genişletilebilir ve çoğaltılabilir.  
+ 
+4. ARAŞTIRMA ÖNERİSİNİN YAYGIN ETKİSİ  
+ 
+      Araştırma önerisi kapsamındaki çalışmadan elde edilmesi öngörülen çıktılar amaçlarına göre belirlenen 
+kategorilere ayrılarak belirtilir; ölçülebilir ve gerçekçi hedeflere dayandırılır.  
+ 
+Çıktı, Etki ve Kazanımlar  Öngörülen Çıktı(lar), Etki(ler) ve Kazanım(lar)  
+Bilimsel/Akademik Çıktılar  
+(Ulusal/Uluslararası Makale, Kitap Bölümü, Kitap, Bildiri 
+vb.) Proje kapsamında elde edilen bulguların ulusal ve 
+uluslararası akademik topluluklarla paylaşılması  
+hedeflenmektedir. Bu doğrultuda, alan ile ilgili saygın 
+bilimsel etkinliklerde sunum yapılması planlanmaktadır. 
+Ayrıca, proje çıktılarının özgün katkılar sunacak şekilde 
+uluslararası indeksli dergilerde makale olarak 
+yayımlanması ve literatüre nitelikli b ir katkı sağlanması 
+=== PAGE 11 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 11 
+  
+ amaçlanmaktadır.  
+Ekonomik/Ticari/Sosyal Çıktılar  
+(Ürün, Prototip, Patent, Faydalı Model, Tescil, 
+Görsel/İşitsel Arşiv, Envanter/Veri Tabanı, Çalıştay, 
+Eğitim, Bilimsel Etkinlik vb. )  Geliştirilen prototip, işletmelerin müşteri tutundurma 
+stratejilerini optimize ederek müşteri kayıp oranlarını 
+azaltmayı ve dolayısıyla müşteri edinme maliyetlerini 
+düşürmeyi amaçlamaktadır. Sistem, farklı veri setleri 
+üzerinde test edilerek genel uygulanabilirliği ve 
+performansı doğrulanacaktır. Bu  sayede çözümün, çeşitli 
+sektörlerde uyarlanabilir ve ölçeklenebilir bir müşteri 
+analitiği platformu olarak konumlanması 
+hedeflenmektedir.  Özellikle bankacılık, 
+telekomünikasyon, e -ticaret ve abonelik tabanlı hizmet 
+sektörlerinde müşteri memnuniyetinin artı rılması, müşteri 
+yaşam boyu değerinin yükseltilmesi ve müşteri 
+devamlılığının sürdürülebilir şekilde sağlanması 
+beklenmektedir.  
+Yeni Proje(ler) Oluşturmasına Yönelik Çıktılar  
+(Ulusal/Uluslararası Yeni Proje vb.)  Açıklanabilir yapay zekâ veri odaklı karar destek 
+sistemlerine yönelik projelere alt yapı sağlayabilir. Farklı 
+sektörlerde, farklı veri setleri üzerinde deneme ve 
+doğrulama çalışmaları ile bu prototip geliştirilebilir.  
+ 
+ 
+ 
+5. BELİRTMEK İSTEDİĞİNİZ DİĞER KONULAR  
+Sadece araştırma önerisinin değerlendirilmesine katkı sağlayabilecek bilgi/veri (grafik, tablo, vb.) eklenebilir.  
+ 
+ 
+ 
+  
+ 
+6. EKLER  
+ 
+EK-1:  KAYNAKLAR  
+ 
+[1] Mohajon, J., & Arif, A. S. M. (2023). Churn prediction with explainability for the customers of telecom industry. 
+In Proceedings of the 2023 International Conference on Information and Communication Technology  for 
+Sustainable Development (ICICT4SD) (pp. 1 –6). 
+ 
+[2] Abdel Aziz, N. M., Bekheet, M., Salah, A., El -Saber, N., & AbdelMoneim, W. T. (2025). A comprehensive 
+evaluation of machine learning and deep learning models for churn prediction. Information, 16(7), 5 37. 
+https://doi.org/10.3390/info16070537  
+[3] Khalilbayli, F., & Sertkaya, C. (2025). Enhancing customer churn prediction in the finance sector through 
+explainable AI and machine learning. International Journal of Advanced Natural Sciences and Engineering 
+Researches, 9(10), 1 –8. 
+[4] Özkurt, C. (2025). Comparative analysis of XAI techniques on telecom churn prediction using SHAP and 
+interpreted ML partial dependence. Türk Doğa ve Fen Dergisi, 14(2), 11 –25. 
+[5] Yıldırım, O. F., & Yıldırım, M. (2022). Yorumlana bilir makine öğrenmesi. In S. Sağıroğlu & M. U. Demirezen 
+(Eds.), Yorumlanabilir ve açıklanabilir yapay zekâ ve güncel konular (pp. 1 –28). Ankara: Nobel Yayınları.  
+=== PAGE 12 ===
+2209/A ÜNİVERSİTE ÖĞRENCİLERİ ARAŞTIRMA PROJELERİ DESTEĞİ PROGRAMI 
+ARAŞTIRMA ÖNERİSİ FORMU  
+ 
+ 
+ 12 
+  
+ [6] Imani, M., Joudaki, M., Beikmohammadi, A., & Arabnia, H. R. (2025). Customer churn predi ction: A systematic 
+review of recent advances, trends, and challenges in machine learning and deep learning. Machine Learning and 
+Knowledge Extraction, 7(3), 105 –129. https://doi.org/10.3390/make7030105  
+[7] Fayaz, S. A., & Zaman, M. (2022). Is deep learnin g on tabular data enough? An assessment. International 
+Journal of Advanced Computer Science and Applications, 13(4), 1 –8. 
+[8] Sama, G., Asuquo, P., & Stephen, B. (2024). Customer churn prediction using machine learning models. 
+Journal of Engineering Resear ch and Reports, 26(2), 181 –193. 
+[9] Manzoor, A., Qureshi, M. A., Kidney, E., & Longo, L. (2024). A review on machine learning methods for 
+customer churn prediction and recommendations for business practitioners. IEEE Access, 12, 70443 –70463. 
+https://doi.or g/10.1109/ACCESS.2024.xxxxx  
+[10] Aydın, M. A. (2025). Telekomünikasyon sektöründe müşteri kaybı tahmini için açıklanabilir makine 
+öğrenmesi. EMO Bilimsel Dergi, 15(2), 71 –79. 
+[11] Borisov, V., Leemann, T., Seßler, K., Haug, J., Pawelczyk, M., & Kasneci, G.  (2022). Deep neural networks 
+and tabular data: A survey. arXiv preprint arXiv:2110.01889v1.  
+[12] Uyar Erdem, Z. (2021). A comparative study for customer churn analysis via machine learning algorithms 
+[Yüksek lisans tezi, Marmara Üniversitesi Fen Bilimleri  Enstitüsü]. İstanbul, Türkiye.  
+[13] Cao, N. (2021). Explainable artificial intelligence for customer churning prediction in banking. CEUR 
+Workshop Proceedings, 3026, 1 –8. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+  
+ 
+  

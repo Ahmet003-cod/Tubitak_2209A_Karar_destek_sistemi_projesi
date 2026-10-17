@@ -1,0 +1,243 @@
+{
+  "cust_idx": 15,
+  "actual_label": 1,
+  "rf_pred_prob": 0.9933333333333333,
+  "mlp_pred_prob": 0.8853877749764776,
+  "raw_values": {
+    "SeniorCitizen": 0.0,
+    "Partner": 0.0,
+    "Dependents": 0.0,
+    "tenure": 2.0,
+    "PhoneService": 1.0,
+    "MultipleLines": 0.0,
+    "OnlineSecurity": 0.0,
+    "OnlineBackup": 0.0,
+    "DeviceProtection": 0.0,
+    "TechSupport": 0.0,
+    "PaperlessBilling": 1.0,
+    "MonthlyCharges": 90.4,
+    "TotalCharges": 168.2,
+    "Streaming": 1.0,
+    "InternetService_Fiber optic": 1.0,
+    "InternetService_No": 0.0,
+    "Contract_One year": 0.0,
+    "Contract_Two year": 0.0,
+    "PaymentMethod_Credit card (automatic)": 0.0,
+    "PaymentMethod_Electronic check": 1.0,
+    "PaymentMethod_Mailed check": 0.0
+  },
+  "rf_local_shap": [
+    {
+      "Feature": "tenure",
+      "Value": 2.0,
+      "SHAP": 0.10724814016932249
+    },
+    {
+      "Feature": "InternetService_Fiber optic",
+      "Value": 1.0,
+      "SHAP": 0.05912659481548951
+    },
+    {
+      "Feature": "TotalCharges",
+      "Value": 168.2,
+      "SHAP": 0.05204838527935259
+    },
+    {
+      "Feature": "Contract_Two year",
+      "Value": 0.0,
+      "SHAP": 0.04325491921562364
+    },
+    {
+      "Feature": "MonthlyCharges",
+      "Value": 90.4,
+      "SHAP": 0.03836303869758627
+    },
+    {
+      "Feature": "PaymentMethod_Electronic check",
+      "Value": 1.0,
+      "SHAP": 0.028712380557397627
+    },
+    {
+      "Feature": "Contract_One year",
+      "Value": 0.0,
+      "SHAP": 0.028177636434433138
+    },
+    {
+      "Feature": "InternetService_No",
+      "Value": 0.0,
+      "SHAP": 0.02798276928191257
+    },
+    {
+      "Feature": "OnlineSecurity",
+      "Value": 0.0,
+      "SHAP": 0.024867691095950724
+    },
+    {
+      "Feature": "TechSupport",
+      "Value": 0.0,
+      "SHAP": 0.019774655242051194
+    },
+    {
+      "Feature": "OnlineBackup",
+      "Value": 0.0,
+      "SHAP": 0.016729283650653654
+    },
+    {
+      "Feature": "Streaming",
+      "Value": 1.0,
+      "SHAP": 0.015997447428873438
+    },
+    {
+      "Feature": "Dependents",
+      "Value": 0.0,
+      "SHAP": 0.015043783434850189
+    },
+    {
+      "Feature": "Partner",
+      "Value": 0.0,
+      "SHAP": 0.013919455585568887
+    },
+    {
+      "Feature": "MultipleLines",
+      "Value": 0.0,
+      "SHAP": -0.009714112389232305
+    },
+    {
+      "Feature": "PaymentMethod_Credit card (automatic)",
+      "Value": 0.0,
+      "SHAP": 0.006316231154955801
+    },
+    {
+      "Feature": "PhoneService",
+      "Value": 1.0,
+      "SHAP": -0.004643474093249805
+    },
+    {
+      "Feature": "PaymentMethod_Mailed check",
+      "Value": 0.0,
+      "SHAP": 0.004246843828976877
+    },
+    {
+      "Feature": "DeviceProtection",
+      "Value": 0.0,
+      "SHAP": 0.004031802793375433
+    },
+    {
+      "Feature": "PaperlessBilling",
+      "Value": 1.0,
+      "SHAP": 0.0024488314829813284
+    },
+    {
+      "Feature": "SeniorCitizen",
+      "Value": 0.0,
+      "SHAP": -0.0005380340946367825
+    }
+  ],
+  "mlp_local_shap": [
+    {
+      "Feature": "MonthlyCharges",
+      "Value": 90.4,
+      "SHAP": 0.3559868161112214
+    },
+    {
+      "Feature": "tenure",
+      "Value": 2.0,
+      "SHAP": 0.13926943733023514
+    },
+    {
+      "Feature": "InternetService_Fiber optic",
+      "Value": 1.0,
+      "SHAP": -0.08878086663305082
+    },
+    {
+      "Feature": "Contract_Two year",
+      "Value": 0.0,
+      "SHAP": 0.0833521351403395
+    },
+    {
+      "Feature": "Contract_One year",
+      "Value": 0.0,
+      "SHAP": 0.0633244043209047
+    },
+    {
+      "Feature": "Streaming",
+      "Value": 1.0,
+      "SHAP": -0.04854087575606639
+    },
+    {
+      "Feature": "Dependents",
+      "Value": 0.0,
+      "SHAP": 0.04797098436050553
+    },
+    {
+      "Feature": "TechSupport",
+      "Value": 0.0,
+      "SHAP": 0.04686765929862284
+    },
+    {
+      "Feature": "InternetService_No",
+      "Value": 0.0,
+      "SHAP": -0.034192823275791845
+    },
+    {
+      "Feature": "OnlineBackup",
+      "Value": 0.0,
+      "SHAP": 0.03184645407382919
+    },
+    {
+      "Feature": "PhoneService",
+      "Value": 1.0,
+      "SHAP": -0.029635928570003876
+    },
+    {
+      "Feature": "PaymentMethod_Electronic check",
+      "Value": 1.0,
+      "SHAP": -0.02825350060179499
+    },
+    {
+      "Feature": "PaymentMethod_Credit card (automatic)",
+      "Value": 0.0,
+      "SHAP": 0.026048720232772434
+    },
+    {
+      "Feature": "PaymentMethod_Mailed check",
+      "Value": 0.0,
+      "SHAP": 0.018104905348687785
+    },
+    {
+      "Feature": "OnlineSecurity",
+      "Value": 0.0,
+      "SHAP": 0.017499783584631612
+    },
+    {
+      "Feature": "DeviceProtection",
+      "Value": 0.0,
+      "SHAP": 0.01026584738341567
+    },
+    {
+      "Feature": "TotalCharges",
+      "Value": 168.2,
+      "SHAP": -0.009774548115020843
+    },
+    {
+      "Feature": "MultipleLines",
+      "Value": 0.0,
+      "SHAP": -0.009248774151830974
+    },
+    {
+      "Feature": "Partner",
+      "Value": 0.0,
+      "SHAP": 0.00850713186628395
+    },
+    {
+      "Feature": "SeniorCitizen",
+      "Value": 0.0,
+      "SHAP": 0.0068565903236125795
+    },
+    {
+      "Feature": "PaperlessBilling",
+      "Value": 1.0,
+      "SHAP": -0.002797329162593171
+    }
+  ]
+}
